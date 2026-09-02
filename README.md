@@ -1,6 +1,6 @@
-# Mark Wenson — Automation Engineer Portfolio
+# Mark Lauron — Automation Engineer Portfolio
 
-This project is a personal portfolio for Mark Wenson, an Automation Engineer focused on connecting business systems and reducing repetitive operational work.
+This project is a personal portfolio for Mark Lauron, an Automation Engineer focused on connecting business systems and reducing repetitive operational work.
 
 The site presents selected automation projects built with n8n, JavaScript, REST APIs, webhooks, Shopify, Airtable, Google Drive and Slack. Each project includes a description of the workflow, the systems involved and the automation patterns used.
 
