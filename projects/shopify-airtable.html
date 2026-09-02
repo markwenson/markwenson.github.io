@@ -29,7 +29,7 @@
       <div class="kicker">E-commerce automation</div>
       <h1>Shopify → Airtable Order Processing</h1>
       <p>An event-driven workflow that turns a Shopify order into structured customer, order and product records in Airtable, with operational Slack notifications.</p>
-      <div class="meta"><span class="tag">n8n</span><span class="tag">Shopify</span><span class="tag">Airtable</span><span class="tag">JavaScript</span><span class="tag">Webhooks</span><span class="tag">Slack</span></div>
+      <div class="meta"><span class="tag">n8n</span><span class="tag">Shopify</span><span class="tag">Airtable</span><span class="tag">Google Drive</span><span class="tag">JavaScript</span><span class="tag">Webhooks</span><span class="tag">Slack</span></div>
     </div>
   </section>
 
@@ -44,13 +44,13 @@
         <p>Order data can become fragmented when customer, order and product information has to be manually copied between systems. The workflow centralizes that handoff and applies different logic depending on whether a customer already exists.</p>
 
         <h2>Solution</h2>
-        <p>The workflow receives a Shopify order, transforms the payload, searches for the customer in Airtable, branches for existing versus new customers, processes order details and iterates through products before updating Airtable and notifying the team.</p>
+        <p>The workflow receives a Shopify order, transforms the payload, searches for the customer in Airtable, branches for existing versus new customers, processes order details, and iterates through products before updating Airtable. After the Airtable loop completes, it creates the required Google Drive folders and notifies the team.</p>
 
         <h2>Workflow architecture</h2>
-        <div class="architecture"><div class="flow"><div class="node">Shopify Order Created</div><div class="arrow">→</div><div class="node">Transform Data</div><div class="arrow">→</div><div class="node">Search Customer</div><div class="arrow">→</div><div class="node">Customer Exists?</div><div class="arrow">→</div><div class="node">Process Order</div><div class="arrow">→</div><div class="node">Iterate Products</div><div class="arrow">→</div><div class="node">Airtable</div><div class="arrow">→</div><div class="node">Slack</div></div></div>
+        <div class="architecture"><div class="flow"><div class="node">Shopify Order Created</div><div class="arrow">→</div><div class="node">Transform Data</div><div class="arrow">→</div><div class="node">Search Customer</div><div class="arrow">→</div><div class="node">Customer Exists?</div><div class="arrow">→</div><div class="node">Process Order</div><div class="arrow">→</div><div class="node">Iterate Products</div><div class="arrow">→</div><div class="node">Airtable Loop</div><div class="arrow">→</div><div class="node">Create Google Drive Folders</div><div class="arrow">→</div><div class="node">Slack</div></div></div>
 
         <h2>Implementation highlights</h2>
-        <ul><li>Shopify order trigger</li><li>JavaScript data transformation</li><li>Existing/new customer branching</li><li>Order creation and association</li><li>Product and variant handling</li><li>Slack operational notification</li></ul>
+        <ul><li>Shopify order trigger</li><li>JavaScript data transformation</li><li>Existing/new customer branching</li><li>Order creation and association</li><li>Google Drive folder creation</li><li>Product and variant handling</li><li>Slack operational notification</li></ul>
 
         <h2>Why this matters</h2>
         <p>This is the strongest example of end-to-end business process automation in the portfolio because it combines event handling, data modeling, branching, iteration and downstream communication.</p>
