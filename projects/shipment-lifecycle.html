@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mark Wenson — Automation Engineer portfolio. n8n, APIs, JavaScript, Shopify, Airtable and business process automation.">
+<title>Shipment → Shopify Delivery Update | Mark Wenson</title>
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">Mark <span>Wenson</span></a>
+    <button class="menu" aria-label="Open navigation">☰</button>
+    <div class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a class="nav-cta" href="https://github.com/markwenson" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <div class="kicker">Lifecycle automation</div>
+      <h1>Shipment → Shopify Delivery Update</h1>
+      <p>A webhook workflow that validates an order, finds its fulfillment ID, marks the fulfillment as delivered through an API, and notifies Slack.</p>
+      <div class="meta"><span class="tag">Webhook</span><span class="tag">Shopify</span><span class="tag">REST API</span><span class="tag">n8n</span><span class="tag">Slack</span><span class="tag">Validation</span></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="project-image">
+      <img src="../assets/images/shopify-delivered.png" alt="Shopify delivered fulfillment workflow">
+    </div>
+
+    <div class="content-grid">
+      <article class="prose">
+        <h2>Problem</h2>
+        <p>When a shipment reaches a delivered state in an upstream process, the corresponding Shopify fulfillment needs to be updated consistently.</p>
+
+        <h2>Solution</h2>
+        <p>The workflow validates the order number, retrieves the relevant fulfillment identifier, calls the delivery-update endpoint and posts a Slack notification when the process completes.</p>
+
+        <h2>Workflow architecture</h2>
+        <div class="architecture"><div class="flow"><div class="node">Webhook</div><div class="arrow">→</div><div class="node">Validate Order</div><div class="arrow">→</div><div class="node">Find Fulfillment ID</div><div class="arrow">→</div><div class="node">Mark Delivered</div><div class="arrow">→</div><div class="node">Slack</div></div></div>
+
+        <h2>Implementation highlights</h2>
+        <ul><li>Webhook trigger</li><li>Order-number validation</li><li>Fulfillment ID lookup</li><li>API-based delivery update</li><li>Slack notification</li></ul>
+
+        <h2>Why this matters</h2>
+        <p>The validation step is important: automation should fail safely when required identifiers are missing or malformed.</p>
+
+        <div class="notice">
+          <strong>Portfolio note:</strong> Screenshots are presented as sanitized visual references.
+          Credentials, customer information and private endpoints should never be published.
+        </div>
+      </article>
+
+      <aside class="side">
+        <h3>Project</h3>
+        <a href="../index.html#projects">← All projects</a>
+        <a href="shopify-airtable.html">Shopify → Airtable</a>
+        <a href="shipment-sync.html">Shipment Sync</a>
+        <a href="shopify-fulfillment.html">Shopify Fulfillment</a>
+        <a href="packing-list.html">Packing List</a>
+        <a href="slack-attendance.html">Slack Attendance</a>
+        <a href="shipment-lifecycle.html">Delivery Update</a>
+      </aside>
+    </div>
+  </div>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© <span data-year>2026</span> Mark Wenson · Automation Engineer</div>
+    <div>
+      <a href="https://github.com/markwenson" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mark-wenson-lauron-874984192/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

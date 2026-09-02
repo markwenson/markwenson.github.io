@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mark Wenson — Automation Engineer portfolio. n8n, APIs, JavaScript, Shopify, Airtable and business process automation.">
+<title>Shopify → Airtable Order Processing | Mark Wenson</title>
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">Mark <span>Wenson</span></a>
+    <button class="menu" aria-label="Open navigation">☰</button>
+    <div class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a class="nav-cta" href="https://github.com/markwenson" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <div class="kicker">E-commerce automation</div>
+      <h1>Shopify → Airtable Order Processing</h1>
+      <p>An event-driven workflow that turns a Shopify order into structured customer, order and product records in Airtable, with operational Slack notifications.</p>
+      <div class="meta"><span class="tag">n8n</span><span class="tag">Shopify</span><span class="tag">Airtable</span><span class="tag">JavaScript</span><span class="tag">Webhooks</span><span class="tag">Slack</span></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="project-image">
+      <img src="../assets/images/shopify-airtable.png" alt="Shopify to Airtable n8n workflow">
+    </div>
+
+    <div class="content-grid">
+      <article class="prose">
+        <h2>Problem</h2>
+        <p>Order data can become fragmented when customer, order and product information has to be manually copied between systems. The workflow centralizes that handoff and applies different logic depending on whether a customer already exists.</p>
+
+        <h2>Solution</h2>
+        <p>The workflow receives a Shopify order, transforms the payload, searches for the customer in Airtable, branches for existing versus new customers, processes order details and iterates through products before updating Airtable and notifying the team.</p>
+
+        <h2>Workflow architecture</h2>
+        <div class="architecture"><div class="flow"><div class="node">Shopify Order Created</div><div class="arrow">→</div><div class="node">Transform Data</div><div class="arrow">→</div><div class="node">Search Customer</div><div class="arrow">→</div><div class="node">Customer Exists?</div><div class="arrow">→</div><div class="node">Process Order</div><div class="arrow">→</div><div class="node">Iterate Products</div><div class="arrow">→</div><div class="node">Airtable</div><div class="arrow">→</div><div class="node">Slack</div></div></div>
+
+        <h2>Implementation highlights</h2>
+        <ul><li>Shopify order trigger</li><li>JavaScript data transformation</li><li>Existing/new customer branching</li><li>Order creation and association</li><li>Product and variant handling</li><li>Slack operational notification</li></ul>
+
+        <h2>Why this matters</h2>
+        <p>This is the strongest example of end-to-end business process automation in the portfolio because it combines event handling, data modeling, branching, iteration and downstream communication.</p>
+
+        <div class="notice">
+          <strong>Portfolio note:</strong> Screenshots are presented as sanitized visual references.
+          Credentials, customer information and private endpoints should never be published.
+        </div>
+      </article>
+
+      <aside class="side">
+        <h3>Project</h3>
+        <a href="../index.html#projects">← All projects</a>
+        <a href="shopify-airtable.html">Shopify → Airtable</a>
+        <a href="shipment-sync.html">Shipment Sync</a>
+        <a href="shopify-fulfillment.html">Shopify Fulfillment</a>
+        <a href="packing-list.html">Packing List</a>
+        <a href="slack-attendance.html">Slack Attendance</a>
+        <a href="shipment-lifecycle.html">Delivery Update</a>
+      </aside>
+    </div>
+  </div>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© <span data-year>2026</span> Mark Wenson · Automation Engineer</div>
+    <div>
+      <a href="https://github.com/markwenson" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mark-wenson-lauron-874984192/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

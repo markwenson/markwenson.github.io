@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mark Wenson — Automation Engineer portfolio. n8n, APIs, JavaScript, Shopify, Airtable and business process automation.">
+<title>Shipment Status Synchronization | Mark Wenson</title>
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">Mark <span>Wenson</span></a>
+    <button class="menu" aria-label="Open navigation">☰</button>
+    <div class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a class="nav-cta" href="https://github.com/markwenson" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <div class="kicker">API synchronization</div>
+      <h1>Shipment Status Synchronization</h1>
+      <p>A scheduled workflow that checks pending shipments, retrieves the latest carrier status through an API, normalizes the response and synchronizes the result with Airtable.</p>
+      <div class="meta"><span class="tag">n8n</span><span class="tag">REST API</span><span class="tag">Airtable</span><span class="tag">JavaScript</span><span class="tag">Scheduling</span><span class="tag">Slack</span></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="project-image">
+      <img src="../assets/images/shipment-sync.png" alt="Shipment status sync n8n workflow">
+    </div>
+
+    <div class="content-grid">
+      <article class="prose">
+        <h2>Problem</h2>
+        <p>Shipment status is time-sensitive, but manually checking individual tracking records is repetitive and easy to miss. The workflow makes the synchronization process automatic.</p>
+
+        <h2>Solution</h2>
+        <p>A schedule starts the workflow, Airtable supplies the records to check, an HTTP request retrieves the latest shipment status, a code step builds a clean output object, and filtering determines which records should be updated or surfaced to the team.</p>
+
+        <h2>Workflow architecture</h2>
+        <div class="architecture"><div class="flow"><div class="node">Schedule</div><div class="arrow">→</div><div class="node">Search Airtable</div><div class="arrow">→</div><div class="node">Carrier API</div><div class="arrow">→</div><div class="node">Clean Output</div><div class="arrow">→</div><div class="node">Filter</div><div class="arrow">→</div><div class="node">Update Airtable</div><div class="arrow">→</div><div class="node">Notify</div></div></div>
+
+        <h2>Implementation highlights</h2>
+        <ul><li>Scheduled execution</li><li>Airtable record search</li><li>External carrier API request</li><li>Response normalization</li><li>Conditional filtering</li><li>Airtable status update</li><li>Slack notification</li></ul>
+
+        <h2>Why this matters</h2>
+        <p>This demonstrates polling and synchronization rather than simple one-to-one app connectivity.</p>
+
+        <div class="notice">
+          <strong>Portfolio note:</strong> Screenshots are presented as sanitized visual references.
+          Credentials, customer information and private endpoints should never be published.
+        </div>
+      </article>
+
+      <aside class="side">
+        <h3>Project</h3>
+        <a href="../index.html#projects">← All projects</a>
+        <a href="shopify-airtable.html">Shopify → Airtable</a>
+        <a href="shipment-sync.html">Shipment Sync</a>
+        <a href="shopify-fulfillment.html">Shopify Fulfillment</a>
+        <a href="packing-list.html">Packing List</a>
+        <a href="slack-attendance.html">Slack Attendance</a>
+        <a href="shipment-lifecycle.html">Delivery Update</a>
+      </aside>
+    </div>
+  </div>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© <span data-year>2026</span> Mark Wenson · Automation Engineer</div>
+    <div>
+      <a href="https://github.com/markwenson" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mark-wenson-lauron-874984192/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

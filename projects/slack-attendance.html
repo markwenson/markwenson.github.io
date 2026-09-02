@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mark Wenson — Automation Engineer portfolio. n8n, APIs, JavaScript, Shopify, Airtable and business process automation.">
+<title>Slack Attendance Status | Mark Wenson</title>
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">Mark <span>Wenson</span></a>
+    <button class="menu" aria-label="Open navigation">☰</button>
+    <div class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a class="nav-cta" href="https://github.com/markwenson" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <div class="kicker">Internal automation</div>
+      <h1>Slack Attendance Status</h1>
+      <p>A compact Slack-to-API workflow that parses human-readable status text into a normalized value and sends it to an internal endpoint.</p>
+      <div class="meta"><span class="tag">Slack</span><span class="tag">JavaScript</span><span class="tag">HTTP API</span><span class="tag">n8n</span></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="project-image">
+      <img src="../assets/images/slack-attendance.png" alt="Slack attendance status workflow">
+    </div>
+
+    <div class="content-grid">
+      <article class="prose">
+        <h2>Problem</h2>
+        <p>Human-entered status messages are not always in a format that downstream systems can consume directly.</p>
+
+        <h2>Solution</h2>
+        <p>The workflow listens for a Slack event, parses and maps the text into a structured status, then sends the normalized value through an HTTP request to the destination system.</p>
+
+        <h2>Workflow architecture</h2>
+        <div class="architecture"><div class="flow"><div class="node">Slack Trigger</div><div class="arrow">→</div><div class="node">Parse & Map Text</div><div class="arrow">→</div><div class="node">HTTP Request</div></div></div>
+
+        <h2>Implementation highlights</h2>
+        <ul><li>Slack trigger</li><li>Text parsing</li><li>Status mapping</li><li>Structured output</li><li>HTTP request</li></ul>
+
+        <h2>Why this matters</h2>
+        <p>Small workflows can still demonstrate useful engineering skills when they solve a clear interface problem between human input and a structured system.</p>
+
+        <div class="notice">
+          <strong>Portfolio note:</strong> Screenshots are presented as sanitized visual references.
+          Credentials, customer information and private endpoints should never be published.
+        </div>
+      </article>
+
+      <aside class="side">
+        <h3>Project</h3>
+        <a href="../index.html#projects">← All projects</a>
+        <a href="shopify-airtable.html">Shopify → Airtable</a>
+        <a href="shipment-sync.html">Shipment Sync</a>
+        <a href="shopify-fulfillment.html">Shopify Fulfillment</a>
+        <a href="packing-list.html">Packing List</a>
+        <a href="slack-attendance.html">Slack Attendance</a>
+        <a href="shipment-lifecycle.html">Delivery Update</a>
+      </aside>
+    </div>
+  </div>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© <span data-year>2026</span> Mark Wenson · Automation Engineer</div>
+    <div>
+      <a href="https://github.com/markwenson" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mark-wenson-lauron-874984192/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

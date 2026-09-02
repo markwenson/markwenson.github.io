@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mark Wenson — Automation Engineer portfolio. n8n, APIs, JavaScript, Shopify, Airtable and business process automation.">
+<title>Packing List & Folder Generation | Mark Wenson</title>
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">Mark <span>Wenson</span></a>
+    <button class="menu" aria-label="Open navigation">☰</button>
+    <div class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a class="nav-cta" href="https://github.com/markwenson" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <div class="kicker">Operations automation</div>
+      <h1>Packing List & Folder Generation</h1>
+      <p>A multi-step operational workflow that creates structured Google Drive folders and links the resulting packing-list information back to Airtable.</p>
+      <div class="meta"><span class="tag">n8n</span><span class="tag">Google Drive</span><span class="tag">Airtable</span><span class="tag">Slack</span><span class="tag">Workflow orchestration</span></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="project-image">
+      <img src="../assets/images/workflow-library.png" alt="n8n workflow library including packing list automation">
+    </div>
+
+    <div class="content-grid">
+      <article class="prose">
+        <h2>Problem</h2>
+        <p>Packing-list preparation requires several repetitive folder and record operations. The workflow orchestrates those steps in a consistent sequence.</p>
+
+        <h2>Solution</h2>
+        <p>The process searches existing Drive folders, determines the relevant folder name, creates the packing-list folder structure, creates the required operational subfolders, updates Airtable with the packing-list link and sends a completion message.</p>
+
+        <h2>Workflow architecture</h2>
+        <div class="architecture"><div class="flow"><div class="node">Trigger</div><div class="arrow">→</div><div class="node">Search Drive</div><div class="arrow">→</div><div class="node">Determine Folder</div><div class="arrow">→</div><div class="node">Create Packing List</div><div class="arrow">→</div><div class="node">Create Subfolders</div><div class="arrow">→</div><div class="node">Update Airtable</div><div class="arrow">→</div><div class="node">Slack</div></div></div>
+
+        <h2>Implementation highlights</h2>
+        <ul><li>Drive search</li><li>Folder-name determination</li><li>Packing-list folder creation</li><li>Nested operational folders</li><li>Airtable link update</li><li>Slack completion message</li></ul>
+
+        <h2>Why this matters</h2>
+        <p>This is a good example of workflow orchestration: the value comes from coordinating several systems and sequential dependencies rather than one API call.</p>
+
+        <div class="notice">
+          <strong>Portfolio note:</strong> Screenshots are presented as sanitized visual references.
+          Credentials, customer information and private endpoints should never be published.
+        </div>
+      </article>
+
+      <aside class="side">
+        <h3>Project</h3>
+        <a href="../index.html#projects">← All projects</a>
+        <a href="shopify-airtable.html">Shopify → Airtable</a>
+        <a href="shipment-sync.html">Shipment Sync</a>
+        <a href="shopify-fulfillment.html">Shopify Fulfillment</a>
+        <a href="packing-list.html">Packing List</a>
+        <a href="slack-attendance.html">Slack Attendance</a>
+        <a href="shipment-lifecycle.html">Delivery Update</a>
+      </aside>
+    </div>
+  </div>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© <span data-year>2026</span> Mark Wenson · Automation Engineer</div>
+    <div>
+      <a href="https://github.com/markwenson" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mark-wenson-lauron-874984192/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>
