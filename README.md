@@ -1,32 +1,51 @@
 # Mark Wenson — Automation Engineer Portfolio
 
-A static GitHub Pages portfolio showcasing business process automation projects built with n8n, APIs, JavaScript, Shopify, Airtable, Google Drive and Slack.
+This project is a personal portfolio for Mark Wenson, an Automation Engineer focused on connecting business systems and reducing repetitive operational work.
 
-## Deploy to GitHub Pages
+The site presents selected automation projects built with n8n, JavaScript, REST APIs, webhooks, Shopify, Airtable, Google Drive and Slack. Each project includes a description of the workflow, the systems involved and the automation patterns used.
 
-1. Create a public repository named `markwenson.github.io` (or `YOURUSERNAME.github.io`).
-2. Upload the contents of this folder to the repository root.
-3. Commit the files to the `main` branch.
-4. Open **Settings → Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select `main` and `/ (root)`.
-7. Save and wait for GitHub Pages to publish the site.
+## Project focus
 
-## Important
+The portfolio demonstrates practical automation across:
 
-Before publishing screenshots from real business workflows, remove or blur:
-- API keys and credentials
-- private webhook URLs
-- customer names, emails, phone numbers and order numbers
-- internal/private domains
-- proprietary business information
+- E-commerce order processing
+- Shipment status synchronization
+- Shopify fulfillment updates
+- Packing-list and folder generation
+- Slack-based internal workflows
+- Shipment lifecycle and exception handling
 
-## Customize
+The workflows follow a common pattern: receive a business event or scheduled trigger, validate and transform data, apply business rules, update an external system, and notify the appropriate team or handle exceptions.
 
-Search the HTML files for:
-- `Mark Wenson`
-- `markwenson`
-- LinkedIn URL
-- project descriptions and results
+## Technology
 
-The site intentionally uses plain HTML/CSS/JavaScript so it can be hosted directly by GitHub Pages without a build step.
+- HTML
+- CSS
+- JavaScript
+- n8n
+- REST APIs and webhooks
+- Shopify
+- Airtable
+- Google Drive
+- Slack
+- SQL and databases
+- GitHub Actions
+- Playwright
+
+## Project structure
+
+```text
+.
+├── index.html              # Main portfolio page
+├── assets/
+│   ├── images/             # Workflow screenshots and visual assets
+│   ├── script.js           # Client-side interactions
+│   └── styles.css          # Site styling and responsive layout
+└── projects/               # Individual project detail pages
+```
+
+The project uses plain HTML, CSS and JavaScript with no build framework or package dependencies.
+
+## Background
+
+Mark's background in QA engineering and software testing informs the portfolio's emphasis on API validation, business logic, edge cases and reliable workflow behavior. The projects focus on automation that is understandable, maintainable and useful in day-to-day operations.
