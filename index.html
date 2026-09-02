@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mark Wenson | Automation Engineer</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f1115;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 24px;
+        }
+
+        nav {
+            padding: 24px 0;
+            border-bottom: 1px solid #252830;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 24px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .hero {
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            color: #ff6b4a;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #aaa;
+            font-size: 19px;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .project {
+            background: #181a20;
+            border: 1px solid #292c35;
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .project h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            color: #aaa;
+            margin-bottom: 18px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #252830;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 13px;
+            color: #ccc;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            border: 1px solid #333640;
+            padding: 10px 16px;
+            border-radius: 6px;
+        }
+
+        footer {
+            border-top: 1px solid #252830;
+            padding: 30px 0;
+            color: #888;
+        }
+
+        @media (max-width: 700px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="container">
+        <div class="logo">Mark Wenson</div>
+
+        <div>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#about">About</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container">
+        <h1>Automation Engineer</h1>
+
+        <h2>n8n · APIs · JavaScript · Business Automation</h2>
+
+        <p>
+            I design and build business process automations that connect
+            e-commerce platforms, databases, APIs, cloud storage, and
+            communication tools.
+        </p>
+    </div>
+</header>
+
+<section id="projects">
+    <div class="container">
+
+        <h2>Featured Automation Systems</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>Shopify → Airtable Automation</h3>
+
+                <p>
+                    Automated Shopify order processing, customer management,
+                    product processing, Airtable synchronization, and Slack
+                    notifications.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">n8n</span>
+                    <span class="tag">Shopify</span>
+                    <span class="tag">Airtable</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Webhooks</span>
+                </div>
+            </div>
+
+
+            <div class="project">
+                <h3>Shipment Status Synchronization</h3>
+
+                <p>
+                    Scheduled workflow that retrieves shipment information
+                    through an external API and synchronizes the latest
+                    status with Airtable.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">n8n</span>
+                    <span class="tag">REST API</span>
+                    <span class="tag">Airtable</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+            </div>
+
+
+            <div class="project">
+                <h3>Shopify Fulfillment Automation</h3>
+
+                <p>
+                    Automated fulfillment updates by extracting tracking
+                    information and sending API requests to Shopify.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">n8n</span>
+                    <span class="tag">Shopify API</span>
+                    <span class="tag">Webhook</span>
+                    <span class="tag">Slack</span>
+                </div>
+            </div>
+
+
+            <div class="project">
+                <h3>Automated Packing List System</h3>
+
+                <p>
+                    Automated Google Drive folder and packing-list creation,
+                    Airtable updates, and operational Slack notifications.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">n8n</span>
+                    <span class="tag">Google Drive</span>
+                    <span class="tag">Airtable</span>
+                    <span class="tag">Slack</span>
+                </div>
+            </div>
+
+
+            <div class="project">
+                <h3>Shipment Exception Monitoring</h3>
+
+                <p>
+                    Automated detection of shipments with no status changes
+                    for an extended period and notification of operational
+                    exceptions.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">n8n</span>
+                    <span class="tag">Automation</span>
+                    <span class="tag">Monitoring</span>
+                    <span class="tag">Slack</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="skills">
+    <div class="container">
+
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+            <span class="skill">n8n</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">REST APIs</span>
+            <span class="skill">Webhooks</span>
+            <span class="skill">Shopify</span>
+            <span class="skill">Airtable</span>
+            <span class="skill">Google Drive</span>
+            <span class="skill">Slack</span>
+            <span class="skill">SQL</span>
+            <span class="skill">GitHub</span>
+            <span class="skill">Playwright</span>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="about">
+    <div class="container">
+
+        <h2>About Me</h2>
+
+        <p>
+            I'm an Automation Engineer with a background in QA engineering
+            and software testing. I specialize in designing workflows that
+            automate repetitive business processes and connect applications
+            through APIs, webhooks, databases, and automation platforms.
+        </p>
+
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+        © 2026 Mark Wenson
+    </div>
+</footer>
+
+</body>
+</html>
