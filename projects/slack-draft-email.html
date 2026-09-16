@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mark Lauron — Slack issue-resolution and email-draft automation using n8n, Airtable and AI.">
+<title>Slack Issue to Email Draft | Mark Lauron</title>
+<link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html">Mark <span>Lauron</span></a>
+    <button class="menu" aria-label="Open navigation">☰</button>
+    <div class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#about">About</a>
+      <a class="nav-cta" href="https://github.com/markLauron" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <div class="kicker">AI-assisted operations</div>
+      <h1>Slack Issue → Email Draft</h1>
+      <p>An AI-assisted workflow that reviews a Slack thread, identifies the customer issue and its resolution, records the result and prepares a follow-up email draft.</p>
+      <div class="meta"><span class="tag">Slack</span><span class="tag">AI</span><span class="tag">Airtable</span><span class="tag">n8n</span><span class="tag">Webhooks</span></div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="project-image">
+      <img src="../assets/images/slack-draft-email.png" alt="n8n workflow that processes Slack issues and creates an email draft">
+    </div>
+
+    <div class="content-grid">
+      <article class="prose">
+        <h2>Problem</h2>
+        <p>Customer issues discussed in Slack can be difficult to track and follow up consistently, especially when the relevant context is spread across a thread.</p>
+
+        <h2>Solution</h2>
+        <p>The workflow receives a Slack event, retrieves and formats its thread, then uses an AI step to identify the issue and resolution. If the issue is unresolved, it posts an update to Slack. When it is resolved, the workflow finds the related order, records the customer issue in Airtable and creates a follow-up email draft.</p>
+
+        <h2>Workflow architecture</h2>
+        <div class="architecture"><div class="flow"><div class="node">Slack Webhook</div><div class="arrow">→</div><div class="node">Retrieve & Format Thread</div><div class="arrow">→</div><div class="node">Identify Issue & Resolution</div><div class="arrow">→</div><div class="node">Resolved?</div><div class="arrow">→</div><div class="node">Update Airtable</div><div class="arrow">→</div><div class="node">Draft Email</div></div></div>
+
+        <h2>Implementation highlights</h2>
+        <ul><li>Webhook-based Slack intake</li><li>Slack thread retrieval and formatting</li><li>AI-assisted issue and resolution extraction</li><li>Conditional handling for unresolved issues</li><li>Airtable order lookup and customer-issue update</li><li>Automated follow-up email draft</li></ul>
+
+        <h2>Why this matters</h2>
+        <p>The workflow turns unstructured internal conversation into a traceable customer-service process, while keeping people in the loop when a resolution still needs attention.</p>
+
+        <div class="notice">
+          <strong>Portfolio note:</strong> Screenshots are presented as sanitized visual references.
+          Credentials, customer information and private endpoints should never be published.
+        </div>
+      </article>
+
+      <aside class="side">
+        <h3>Project</h3>
+        <a href="../index.html#projects">← All projects</a>
+        <a href="shopify-airtable.html">Shopify → Airtable</a>
+        <a href="shipment-sync.html">Shipment Sync</a>
+        <a href="shopify-fulfillment.html">Shopify Fulfillment</a>
+        <a href="packing-list.html">Packing List</a>
+        <a href="slack-attendance.html">Slack Attendance</a>
+        <a href="shipment-lifecycle.html">Delivery Update</a>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>© <span data-year>2026</span> Mark Lauron · Automation Engineer</div>
+    <div>
+      <a href="https://github.com/markLauron" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/mark-wenson-lauron-874984192/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>
